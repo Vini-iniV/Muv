@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+
+mat-form-field{
+  width:100%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(0deg, rgb(191,191,191) 0%, white 100%);
+}
+
+.navbar {
+  width: 100%;
+  height: 15vh;
+}
+
+.navbar a{
+  color: rgb(0,0,0);
+  font-size: 4.5vw;
+  font-family: Rock Salt;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-style: italic;
+  padding-left: 2vw;
+}
+
+.btnLoginNavBar{
+  font-size: 2.0vw;
+  color: #000000;
+  border-bottom: 3px solid black !important;
+  margin: 5%;
+  text-align: center;
+}
+
+.btnCadastroNavbar{
+  color: #000000;
+  font-size: 2.0vw;
+  border-color: rgb(219, 232, 48) !important;
+  background-color: rgb(219, 232, 48) !important;
+}
+
+.textoEImagem {
+  width: 100%;
+  height: 65vh;
+  margin-top: 3%;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.btnCadastroForm {
+  color: #000000;
+  border-color: rgb(219, 232, 48) !important;
+  background-color: rgb(219, 232, 48) !important;
+  text-align: center;
+}
+
+.rodade {
+  width: 100%;
+  height: 10vh;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 3%;
+  width: 100%;
+  background-color: rgb(219, 232, 48);
+  color: black;
+  text-align: center;
+}

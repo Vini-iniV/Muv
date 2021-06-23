@@ -1,0 +1,81 @@
+<div cdkDropListGroup class="workspace-box ">
+  <div class="exercicios-box text-center">
+    <div class="btn-exercicios">
+      <button class="btn btn-primary right" (click)="novoExercicio()">Criar exercício</button>
+    </div>
+    <div
+      id="workspace-exercicios"
+      cdkDropList
+      [cdkDropListData]="exercicios"
+      cdkDropListSortingDisabled
+      (cdkDropListDropped)="drop($event)"
+      style="display: block; overflow: auto;"
+    >
+      <mat-card
+        class="col-3"
+        *ngFor="let exercicio of exercicios"
+        cdkDrag
+      >
+        <app-exercicios [exercicio]="exercicio"></app-exercicios>
+      </mat-card>
+    </div>
+  </div>
+  <div class="treino-box">
+    <div class="lista">
+      <h3>Lista de Exercícios:</h3>
+      <div
+        id="lista-exercicios"
+        cdkDropList
+        [cdkDropListData]="exerciciosTreino"
+        (cdkDropListDropped)="drop($event)"
+        class="lista-exercicios"
+      >
+        <h3
+          id="exercicios-treino"
+          *ngIf="!exerciciosTreino[0]"
+        >
+          Arraste os exercícios aqui!
+        </h3>
+        <div
+          class="ex-lista"
+          *ngFor="let exTreino of exerciciosTreino"
+          placeholder="Arraste aqui!"
+          cdkDrag
+        >
+          {{ exTreino.nome }} {{ exTreino.series }}x{{ exTreino.repeticoes }}
+        </div>
+      </div>
+    </div>
+    <form [formGroup]="treinoForm" (submit)="cadastrarTreino(treinoForm)">
+      <mat-form-field id="mat-form-nome">
+        <mat-label>Nome Treino</mat-label>
+        <input
+          id="nomeInput"
+          name="nome"
+          type="text"
+          matInput
+          formControlName="nome"
+          class="form-control"
+          placeholder="Treino#1"
+          minlength="2"
+          autocomplete="off"
+          required
+        />
+        <mat-error *ngIf="treinoForm.get('nome').invalid"
+          >Digite um nome</mat-error
+        >
+      </mat-form-field>
+      <div
+        class="modal-footer btn-treino"
+      >
+        <button
+          type="submit"
+          class="btn btn-lg btn-success"
+        >
+          <div *ngIf="!routerTreino">Criar treino</div>
+          <div *ngIf="routerTreino">Atualizar</div>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+      <title>Muv!</title>
+  </head>
+  <!-- class="overflow-auto" pra fazer o scroll em mobile -->
+  <body class="overflow-auto">
+    <!-- NavBar -->
+    <section id="navbar">
+        <app-navbar-pagina-inicial></app-navbar-pagina-inicial>
+    </section>
+
+    <!-- Conteudo Principal -->
+    <section id="textoEImagem" style="margin-top:5%">
+        <div class="row">
+            <div class="col-lg-12 col-xl-6 text-center" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" style="padding: 5%;">
+                <h1 style="text-align: center; padding-top: 5%;">
+                  Treinos e Exercícios Diretamente do Conforto de Casa
+                </h1>
+                <br>
+                <p style="text-align: center;">
+                  <strong>
+                    Com o MUV!, você recebe um catálogo com vários exercícios, além de ser capaz de criar seu próprio treino personalizado!
+                    De maneira totalmente gratuita, o MUV! também oferece a opção de calcular seu IMC e IAC, tudo isso para ajudar você
+                    a conseguir se manter o mais saudável possível, diretamente da sua casa.
+                  </strong>
+                  <br><br><br>
+                </p>
+                <div class="container">
+                  <form class="form-inline justify-content-center" (submit)="openCadastro()" #cadastroEmailPreenchidoForm="ngForm">
+                      <div class="form-group">
+                        <input class="form-control" ngModel type="email" name="email" placeholder="Email" required [(ngModel)]="email">
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary btnCadastroForm">
+                          Cadastre-se, é grátis!&nbsp;
+                        </button>
+                      </div>
+                  </form>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xl-6 text-center" style="margin-top: 5%;padding-top: 0;padding-bottom: 5%; padding-right: 5%;">
+              <img data-aos="fade" data-aos-duration="1000" data-aos-delay="900" data-aos-once="true" class="img-fluid" src="../assets/ImgPaginaInicial.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodape/Footer -->
+    <section id="rodape">
+        <footer>
+            <h6>Muv! © Todos os direitos reservados</h6>
+        </footer>
+    </section>
+  </body>
+</html>

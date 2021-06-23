@@ -1,0 +1,19 @@
+.no-margin{
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+//Retirando scroll de fora do modal de exercício (overflow-y)
+.cdk-global-scrollblock{
+  overflow-y: hidden;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/* Importando AOS para animações*/
+@import 'aos/dist/aos.css';
