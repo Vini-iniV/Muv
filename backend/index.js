@@ -13,7 +13,7 @@ app.use(express.json());
 
 mongoose
   .connect(
-    `mongodb+srv://Vinicius:hrtVI9GJjEWyeoRL@muvdb.9vvdh.mongodb.net/Site_Muv?retryWrites=true&w=majority`,
+    `mongodb+srv://UsuarioVaiAqui:SenhaVaiAqui@muvdb.9vvdh.mongodb.net/NomeDoBancoAqui?retryWrites=true&w=majority`,
     { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true  }
   )
   .then(() => {
